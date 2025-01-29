@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Page</title>
+        <link rel="icon" type="icon" href="survey.png">
+    </head>
+    <body>
+        <div >
+            <h1 id="title">Survey Form</h1>
+            <p id="description"><em>Thank you for taking the time to help us improve the platform </em></p>
+        </div>
+        <form  id="survey-form" action="submit.php" method="post">
+            <div class="first">
+                <fieldset>
+                    <label for="first-name">First Name: <input id="first-name" type="text" name="first-name" placeholder="Enter your first name" required/> </label>
+                    <label for="last-name">Last Name: <input id="last-name" type="text" name="last-name" placeholder="Enter your last name" required/> </label>
+                    <label for="email">Email: <input id="email" type="email" name="email" placeholder="Enter your email" required/> </label>
+                    <label for="age">Age (optional): <input id="age" type="number" min="12" max="100" name="age" placeholder="Age" /> </label>
+                    <label for="options">Which option best describes your current role? 
+                        <select id="options" name="options" required >
+                            <option value="">Select current role</option>
+                            <option value="1">Student</option>
+                            <option value="2">Full Time Job</option>
+                            <option value="3">Full Time Learner</option>
+                            <option value="4">Prefer Not Say</option>
+                            <option value="5">Other</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </div>
+            <div class="menu">-
+                <fieldset>
+                    <legend>Would you recommend this Survey to a friend?</legend>
+                    <label for="definitely"><input id="definitely" type="radio" name="recommend" checked/>Definitely </label>
+                    <label for="maybe"><input id="maybe" type="radio" name="recommend" />Maybe </label>
+                    <label for="not"><input id="not" type="radio" name="recommend" />Not Sure </label>
+                </fieldset>
+            </div>
+            <div class="menu">
+                <fieldset>
+                    <label for="option">What is your favorite feature of this Survey? 
+                        <select id="option" name="option" required >
+                            <option value="">Select an option</option>
+                            <option value="1">Color</option>
+                            <option value="2">Design</option>
+                            <option value="3">Background</option>
+                            <option value="4">Prefer Not Say</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </div>
+            <div class="menu">
+                <fieldset>
+                    <legend>What is your favorite feature of this Survey? (Check all that apply)</legend>
+                    <label for="data"><input id="data" type="checkbox" value="data" name="data"/>Data Visualization </label>
+                    <label for="functionality"><input id="functionality" type="checkbox" value="function" name="function"/> Functionality / Performance </label>
+                    <label for="Feature Set"><input id="Feature Set" type="checkbox" value="feature" name=" Feature Set"/> Feature Set / Capabilities </label>
+                    <label for="Instructions"><input id="Instructions" type="checkbox" value="documentation" name="Instructions"/>Documentation / Instructions </label>
+                    <label for="Visual Aesthetics"><input id="Visual Aesthetics" type="checkbox" value="visual" name="Visual Aesthetics"/>Visual Aesthetics </label>
+                    <label for="Ease of Use "><input id="Ease of Use " type="checkbox" value="ease" name="Ease of Use "/>Ease of Use  </label>
+                    <label for="Customization Options"><input id="Customization Options" type="checkbox" value="customization" name="Customization Options"/>Customization Options </label>
+                    <label for="Privacy Features"><input id="Privacy Features" type="checkbox" value="privacy" name="Privacy Features"/>Privacy Features </label>                
+                </fieldset>
+            </div>
+            <div class="menu">
+                <fieldset>
+                    <label>Any comments or suggestions? <textarea cols="60" rows="8" placeholder="Enter your comment here..."></textarea> </label>
+                </fieldset>
+            </div>
+            <input id="submit" type="submit" value="Submit"/>
+        </form>
+
+        
+    </body>
+</html>
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Product landing page">
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Product-Landing</title>
+</head>
+<body>
+    <header id="header">
+        <img  id="header-img" src="https://imgs.search.brave.com/psYsKMQZd8hJtlKxl5xTx59iHa4nT16fg7I3kSf3M6Y/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by90d28tYmxhY2st/a25pdmVzLWNyb3Nz/ZWQtc2ltcGxlLWRl/c2lnbl80MTYwNi02/NTAuanBnP3NpemU9/NjI2JmV4dD1qcGc" loading="lazy" alt="Chef knives">
+        <nav id="nav-bar">
+            <ul>
+                <li><a class="nav-link" href="#Features">Features</a></li>
+                <li><a class="nav-link" href="#How_it_Works">How it Works</a></li>
+                <li><a class="nav-link" href="#Pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="info">
+        <h1>Handcrafted, precision-engineered tools</h1>
+        <form action="https://www.freecodecamp.com/email-submit" id="form" method="post">
+            <label for="email">
+                <input id="email" type="email" name="email" required placeholder="Enter your email"/><br />
+            </label>
+            <input class="input" type="submit" value="Get Started"/>
+        </form>
+    </section>
+    <section id="Features">
+        <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+        <h2>Premium Materials</h2>
+        <p>Our kitchen knives use high-carbon stainless steel sourced locally. This ensures long-lasting sharpness and resistance to rust.</p>
+        <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+        <h2>Fast Shipping</h2>
+        <p>We guarantee fast delivery of your knife set as soon as it's ready. Free returns are available if you're not completely satisfied.</p>
+        <div class="icon"><i class="fa fa-3x fa-battery-full" aria-hidden="true"></i></div>
+        <h2>Quality Assurance</h2>
+        <p>Each knife undergoes rigorous quality checks to ensure precision, balance, and sharpness. Every blade is hand-sharpened for optimal performance.</p>
+    </section>
+    <section id="How_it_Works">
+        <iframe 
+         id="video"
+         width="560" 
+         height="315"
+         src="https://www.youtube-nocookie.com/embed/Ydc_SaQ_eRQ?rel=0&amp;controls=0&amp;showinfo=0" 
+         frameborder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+         allowfullscreen>
+        </iframe>
+    </section>
+    <section id="Pricing">
+        <div class="prices">
+            <h3>Chef's Knife</h3>
+            <p>$150</p>
+            <ul>
+                <li>Perfect for slicing and dicing</li>
+                <li>High-carbon stainless steel</li>
+                <li>Ergonomic handle for comfort</li>
+            </ul>
+            <button class="button" type="button">Select</button>
+        </div>
+        <div class="prices">   
+            <h3>Paring Knife</h3>
+            <p>$50</p>
+            <ul>
+                <li>Ideal for small tasks like peeling</li>
+                <li>Razor-sharp precision</li>
+                <li>Easy to handle and maneuver</li>
+            </ul>
+            <button class="button" type="button">Select</button>
+        </div>
+        <div class="prices">   
+            <h3>Santoku Knife</h3>
+            <p>$120</p>
+            <ul>
+                <li>Great for chopping, slicing, and dicing</li>
+                <li>Lightweight with a flat edge</li>
+                <li>Versatile and efficient</li>
+            </ul>
+            <button class="button" type="button">Select</button>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <p>Copyright 2024, Original Knives</p>
+    </footer>
+</body>
+</html>

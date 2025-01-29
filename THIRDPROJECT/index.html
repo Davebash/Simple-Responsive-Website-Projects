@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Java documentation page">
+    <link rel="stylesheet" href="styles.css">
+    <title>Java Documentation</title>
+    <link rel="icon" type="favicon" href="java.png">
+</head>
+<body>
+    <div class="nav">
+        <nav id="nav-bar">
+            <header id="document">Java Documentation</header>
+            <ul>
+               <li><a class="nav-link" href="#introduction">Introduction</a></li>
+               <li><a class="nav-link" href="#what">What you should already know</a></li>
+               <li><a class="nav-link" href="#java">Java vs. C++</a></li>
+               <li><a class="nav-link" href="#object">Object-Oriented Programming in Java</a></li>
+               <li><a class="nav-link" href="#hello">Hello world</a></li>
+               <li><a class="nav-link" href="#variables">Variables</a></li>
+               <li><a class="nav-link" href="#declaring">Declaring variables</a></li>
+               <li><a class="nav-link" href="#scope">Variable scope</a></li>
+               <li><a class="nav-link" href="#global">Global variables</a></li>
+               <li><a class="nav-link" href="#constants">Constants</a></li>
+               <li><a class="nav-link" href="#data">Data types</a></li>
+               <li><a class="nav-link" href="#if">if...else statement</a></li>
+               <li><a class="nav-link" href="#while">while statement</a></li>
+               <li><a class="nav-link" href="#function">Function declarations</a></li>
+               <li><a class="nav-link" href="#reference">Reference</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section id="introduction">
+            <article>
+                <header>Introduction</header>
+                <p>Java is a high-level, class-based, object-oriented programming language that is 
+                    designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let application developers write once, 
+                    run anywhere (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.
+                </p>
+
+                <p>Java applications are typically compiled to bytecode that can run on any Java
+                    Virtual Machine (JVM), regardless of the underlying computer architecture. The syntax of
+                    Java is similar to C and C++, but Java has fewer low-level facilities than either of them.
+                </p>
+
+                <ul>
+                    <h2>Java Features</h2>
+                    <li>Object-Oriented: Java supports the principles of object-oriented programming 
+                        such as inheritance, encapsulation, polymorphism, and abstraction.</li>
+                    <li>Platform-Independent: Programs written in Java are compiled into bytecode,
+                         which can be run on any machine with a JVM</li>
+                    <li>Automatic Memory Management: Java features automatic memory 
+                        management and garbage collection, meaning developers do not need to 
+                        manually manage memory allocation and deallocation.</li>
+                </ul>
+            </article>
+        </section>
+        <section id="what">
+            <article>
+                <header>What you should already know</header>
+                <p>This guide assumes you have the following basic background: </p>
+                <ul>
+                    <li>A general understanding of the Internet and the World Wide Web (WWW)</li>
+                    <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+                    <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about Java.</li>
+                </ul>
+            </article>
+        </section>
+        <section id="java">
+            <article>
+                <header>Java vs. C++</header>
+                <p>Java and C++ have some significant differences:</p>
+                <ul>
+                    <li>Memory Management: Java uses an automatic garbage collector to manage
+                         memory, whereas C++ requires manual memory allocation and deallocation 
+                         (using new, delete).
+                    </li>
+                    <li>Platform Independence: Java is platform-independent due to the JVM. C++
+                         code needs to be compiled separately for each platform.
+                    </li>
+                    <li>Syntax and Complexity: Java is generally simpler with fewer low-level 
+                        constructs like pointers, while C++ provides more fine-grained control over
+                         system resources.</li>
+                    <li>Use Cases: Java is widely used in web applications, mobile development 
+                        (Android), and enterprise software. C++ is used for game development, high-
+                        performance computing, and systems programming.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section id="object">
+            <article>
+                <header> Object-Oriented Programming in Java</header>
+                <p>Java is a pure object-oriented language, where almost everything (except primitive 
+                    types) is an object. Key OOP principles in Java include:</p>
+                <ul>
+                    <li>Encapsulation: Restricting direct access to an object's data and providing
+                         methods for interaction.
+                    </li>
+                    <li>Inheritance: The ability for classes to inherit properties and methods from 
+                        other classes.
+                    </li>
+                    <li>Polymorphism: Allowing one interface to be used for different data types.
+                         Here's an example of a simple class in Java:
+                    </li>
+                    <code>
+                        class Car {
+                            String brand;
+                            int speed;
+                        
+                            void accelerate() {
+                                speed += 10;
+                            }
+                        }          
+                    </code>
+                    <p>The Car class encapsulates properties (brand, speed) and behavior (accelerate).</p>
+                </ul>
+            </article>
+        </section>
+        <section id="hello">
+            <article>
+                <header>Hello World</header>
+                <p>Here is a simple "Hello, World!" example in Java:</p>
+                <code>
+                    public class Main {
+                        public static void main(String[] args) {
+                            System.out.println("Hello, World!"); 
+                        }
+                    }                    
+                </code>
+                <p>This code defines a Java class named Main with a main method, which serves as
+                   the entry point for any standalone Java application. The method prints "Hello, World!"
+                   to the console.
+                </p>
+                
+            </article>
+        </section>
+        <section id="variables">
+            <article>
+                <header>Variables</header>
+                <p>In both Java and C++, variables act as containers to store data values. However,
+                     Java variables fall into primitive and reference types. Primitive types include int,
+                     boolean, char, etc., while reference types store addresses of objects. In C++,
+                     variables are typically primitive, but pointers and references add complexity,
+                     allowing direct memory access. Java simplifies this by removing the need for pointers.</p>
+            </article>
+        </section>
+        <section id="declaring">
+            <article>
+                <header>Declaring Variables</header>
+                <p>In Java, variables must be declared with a type:</p>
+                <code>
+                    int myNumber = 5;
+                    String name = "John";                      
+                </code>
+                <p>C++ follows a similar structure but allows for more complexity, such as pointers:</p>
+                <code>
+                    int* ptr;  // Pointer declaration in C++ 
+                </code>
+                <p>Java's approach ensures more safety by abstracting memory management, while
+                   C++ offers more flexibility and control.
+                </p>
+            </article>
+        </section>
+        <section id="scope">
+            <article>
+                <header>Variable Scope</header>
+                <p>Variable scope defines where in a program a variable can be accessed:</p>
+                <ul>
+                    <li>Local Scope: Variables declared inside a method (Java) or function (C++) are
+                         accessible only within that method or function.
+                    </li>
+                    <li>Class Scope: Variables declared at the class level are accessible throughout the class.
+                         Java variables declared within a block {} have scope limited to that
+                         block, whereas C++ allows more control with pointers and references.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section id="global">
+            <article>
+                <header>Global Variables</header>
+                <p>Global variables are variables accessible from any part of the program:</p>
+                <ul>
+                    <li>Java: Global variables are often simulated using static class members, as Java
+                         doesn't support true global variables.
+                    </li>   
+                    <code>
+                      class MyClass {
+                          static int globalVar = 100;
+                      }                     
+                    </code>
+                    <li>C++: Global variables can be declared outside of all functions and classes,
+                         making them accessible everywhere in the program.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section id="constants">
+            <article>
+                <header>Constants</header>
+                <p>Constants are fixed values that cannot change during program execution. In Java,
+                     you define constants using the final keyword:
+                </p>
+                <code>
+                    final int MAX_SPEED = 120;  
+                </code>
+                <p>
+                    In C++, constants are declared using const: 
+                </p>
+                <code>
+                    const int MAX_SPEED = 120;
+                </code>
+                <p>
+                    Java constants are typically declared within a class, whereas C++ constants can be
+                     declared globally or locally.
+                </p>
+            </article>
+        </section>
+        <section id="data">
+            <header>Data Types</header>
+            <article>
+                <p>Java and C++ both support basic data types like int, float, and char. Java also
+                    provides wrapper classes (Integer, Float) to convert primitive data into objects.
+                    C++ supports more low-level data management through pointers, structures, and unions, allowing you to manipulate memory directly. Both languages 
+                    enforce strict typing, but C++ allows more flexibility through templates and type casting.
+                </p>
+            </article>
+        </section>
+        <section id="if">
+            <article>
+                <header>if...else statement</header>
+                <p>The if...else statement controls conditional execution in both Java and C++. 
+                   Their syntax is very similar:
+                </p>
+                <code>
+                    if (condition) {
+                        // code
+                    } else {
+                        // code
+                    }                                        
+                </code>
+                <p>The statement checks the condition: if true, the first block of code executes;
+                   otherwise, the code in the else block runs. In both languages, these statements
+                   are used to make decisions and control program flow.
+                </p>
+            </article>
+        </section>
+        <section id="while">
+            <article>
+                <header>while statement</header>
+                <p>Both Java and C++ use the while loop for repeating code as long as a condition is true:</p>
+                <code>
+                    while (condition) {
+                        // loop body
+                    }                    
+                </code>
+                <p>This loop checks the condition before each iteration. If the condition is false at the
+                   start, the loop will not execute at all. It's commonly used for continuous checks
+                   or processing data streams.
+                </p>
+            </article>
+        </section>
+        <section id="function">
+            <article>
+                <header>Function declarations</header>
+                <p>Functions (or methods in Java) are reusable blocks of code that perform a specific task:</p>
+                <ul>
+                    <li>Java: Functions are always defined within classes and are known as methods. For example:</li>
+                    <code>
+                        public void myFunction() {
+                            // code
+                        }                        
+                    </code>
+                    <li>C++: Functions can exist globally or inside classes. For example:</li>
+                    <code>
+                        void myFunction() {
+                            // code
+                        }                        
+                    </code>
+                    <p>Java's methods must belong to classes, while C++ supports both free functions and
+                     methods within classes, giving it more flexibility.
+                    </p>
+                </ul>
+            </article>
+        </section>
+        <section id="reference">
+            <article>
+                <header>Reference</header>
+                <p>For further reading and official documentation:</p>
+                <ul>
+                    <li><a id="refer" href="https://docs.oracle.com/en/java/javase/22/index.html" target="_blank">Java Documentation</a> provides comprehensive resources on Java language features and APIs.</li>
+                </ul>      
+            </article>
+        </section>
+    </main>   
+</body>
+</html>
+
+
