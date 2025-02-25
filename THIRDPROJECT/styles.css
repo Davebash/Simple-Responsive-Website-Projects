@@ -1,269 +1,140 @@
-*, ::after, ::before{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-    
-  }
-  body {
-    background-color: #fffefe;
-    font-family: 'Open Sans', 'Arial', sans-serif;
-    font-size: 14px;
-    width: 100%;
-    min-height: fit-content; /* to grow beyond viewport */
-    color: #9a93a3;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; 
-    flex-direction: row ;  
-    box-sizing: border-box; 
-    overflow-x: hidden;
-  }
-  
-  
-  #nav-bar{
-    display:flex;
-    color: gray;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    top: 0;
-    left:0;
-    position:fixed;
-    min-width: 10px;
-    min-height: 100vh;
-    margin-right: 50px;
-    padding:0px;
-    border-right: 5px solid silver;
-    width: 400px;
-    height: 100vh;
-    font-size: 1.5rem;  
-  }
-  
-  .nav-link{
-    text-decoration: none;
-    color: gray;
-    padding-left: 15px;
-    display: flex;
-    justify-content: flex-start;
-    transition: none;
-  }
-  
-  nav ul li {
-    box-sizing: border-box;
-    list-style: none;
-    border-top: 2px solid black;
-    margin: 0;
-    padding-left: 20px;
-    padding-right: 50px;
-    width: 400px;
-    height:fit-content;
-    overflow: hidden;
-    
-  }
-  
-  #nav-bar ul {
-    width: 100%; 
-    height: calc(100vh - 100px); 
-    overflow-y: auto; 
-    overflow-x:hidden;
-  }
-  
-  #document{
-    text-align: center;
-    padding: 30px;
-    width:400px;
-    height: 100px;
-  }
-  
-  
-  
-  header {
-    font-size: 2.0rem;
-    color: #000000;
-    text-align: left;
-    padding-bottom: 60px;
-    padding-top: 20px;
-    overflow-x: hidden;  
-    overflow-y: auto;
-    font-weight:bold;
-    margin: 20px 0 20px 0;
-    font-family: 'Montserrat', 'Lora', sans-serif;
-  
-  }
-  
-  section p {
-    font-size: 1.5rem;
-    margin-left: 0 30px;  
-    max-width: 1250px;   
-    min-width: 300px;   
-    min-height: 100px;  
-    color: #6e6e6e;     
-    line-height: 1.6;
-    margin-bottom: 10px;  
-  }
-  
-  
-  section {
-    margin-top: 10px;
-    margin-left: 200px;
-    margin-bottom: 10px; 
-    padding: 0px 0 10px;
-    width: fit-content;  
-    min-height: fit-content;
-    overflow: hidden;
-    height: auto;
-  }/* this is what i fixed i changed the min-height to fit-content and the height to be auto 
-  */
-  
-  h2{
-    color: #6e6e6e;
-    text-align: left;
-    padding-top:10px;
-    padding-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  section ul  li{
-    width: 100%;
-    padding: 15px 0;
-    font-size: 1.5rem;
-    margin-left: 30px;  
-    max-width: 1000px;   
-    min-width: 200px;   
-    min-height: 10px;  
-    color: #6e6e6e;     
-    line-height: 1.3;
-    font-weight: lighter;
-    margin-top:0;
-    overflow: hidden;
-  
-  }
-  section ul{
-    margin-left: 100px;
-    margin-top: auto;
-    overflow: hidden;
+/* General Styles */
+*, ::after, ::before {
     padding: 0;
-  }
-  
-  ul > li{
     margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-width: 290px;
+    color: #4d4e53;
+    background-color: #fffefe;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container for Navbar and Main Content */
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Default side-by-side layout */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Navbar Styling */
+#nav-bar {
+    width: 300px; /* Fixed width for normal screens */
+    height: 100%;
+    border-right: 2px solid rgba(0, 22, 22, 0.4);
+    background-color: #ffffff;
+    overflow-y: auto; /* Make navbar scrollable if content overflows */
+    z-index: 1;
+}
+
+#nav-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-bar li {
+    border-top: 1px solid #e1e1e1;
     width: 100%;
-    padding: 15px 0;
-    overflow: hidden;
-  }
-  
-  code {
-    background-color: lightgrey;
-    color: #000000;
-    padding: 40px;
-    margin: 30px;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 30px;
+    color: #4d4e53;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.nav-link:active {
+    color: #0056b3;
+}
+
+/* Main Content Styling */
+main {
+    flex-grow: 1; /* Allow main content to take up remaining space */
+    padding: 20px;
+}
+
+header {
+    color: black;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+section p {
+    font-size: 1.3rem;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+section ul li {
+    margin: 10px 0 0 20px;
+    font-size: 1.3rem;
+}
+
+code {
     display: block;
     text-align: left;
-    font-size: 1rem;
-    max-width: 80%;
+    white-space: pre-line;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 10px 0;
     border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  #refer:hover{
-    color: darkblue;
-  }
-   
-  @media only screen and (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 0;
+}
+
+/* Responsive Design for Smaller Screens */
+@media only screen and (max-width: 815px) {
+    /* Stack Navbar and Main Content Vertically */
+    .container {
+        flex-direction: column; /* Change to vertical stacking */
+        align-items: center; /* Center content horizontally */
     }
-    .nav{
-      width: 100vw;
-    }
+
     #nav-bar {
-        width: 100vw;
-        position: relative;
-        height: auto;
-        border-bottom: 2px solid silver;
-        font-size: 1.2rem;
-        overflow: hidden;
-        padding: 10px 0;
+        width: 100%; /* Make navbar full-width */
+        max-height: 275px; /* Limit height for smaller screens */
+        border: none;
+        border-bottom: 2px solid rgba(0, 22, 22, 0.4);
+        overflow-y: auto; /* Make navbar scrollable if content overflows */
     }
-  
-    nav ul li {
-        max-width: 100%;
-        width: calc(100% - 20px);
-        padding: 8px;
-        font-size: 1.1rem;
-        overflow: hidden;
-        flex-shrink: 1; 
+
+    main {
+        width: 90%; /* Center content by limiting width */
+        max-width: 600px; /* Prevent content from stretching too wide */
+        margin-top: 20px; /* Add spacing below the navbar */
     }
-  
-    section {
-        margin: 5px 0;
-        width: calc(100% - 20px);
+}
+
+/* Additional Adjustments for Very Small Screens */
+@media only screen and (max-width: 400px) {
+    main {
+        width: 95%; /* Increase width for better fit */
         padding: 10px;
-        position: relative;
-        min-width: fit-content;
-        max-width: fit-content;
-        margin-left: 20px;
-        max-height: calc(100vh - 50px);
-        overflow-y: auto;
-        box-sizing: border-box;
-        flex-shrink: 1; 
-        flex-wrap: nowrap; 
     }
-  
-    header {
-        font-size: 2rem;
-        display: flex;
-        justify-content: center;
-        margin: auto;
+
+    code {
+        margin-left: -20px;
+        padding-left: 10px;
+        padding-right: 45px;
+        min-width: 233px;
     }
-  }
-  
-  
-  @media only screen and (min-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0;
+
+    section p, section ul li {
+        font-size: 1.2rem;
+        margin: 10px 0;
     }
-  
-    #nav-bar {
-        width: 400px;
-        height: 100vh;
-        position: fixed;
-        border-right: 5px solid silver;
-        font-size: 1.5rem;
-    }
-  
-    section {
-        margin-left: 420px;
-        width: calc(100% - 420px);
-        padding: 20px;
-        position: relative;
-        min-width: fit-content;
-        max-height: 100vh;
-        overflow-y: auto;
-        box-sizing: border-box;
-        flex-shrink: 1; 
-        flex-wrap: nowrap; 
-    }
-    
-    #document{
-        padding: 30px;
-        font-size: 1.5rem;
-    }
-  
-    header {
-        font-size: 2.0rem;
-    }
-  
-    section p {
-        font-size: 1.5rem;
-        line-height: 1.6;
-    }
-  } 
-  
+}
